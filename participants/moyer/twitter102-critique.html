@@ -195,8 +195,6 @@ Error message and password prompt
 
 <li>Draft of 'New Tiddler'</li>
 
-<li>Draft of 'Responding to Messages Table Example'</li>
-
 <li>How to Tweet</li>
 
 <li>How Twitter Helps Your Business</li>
@@ -6526,7 +6524,7 @@ Error message and password prompt
 <div created="20160627215919287" modified="20160627220334889" title="$:/state/tag-manager/Mentions">
 <pre>closed</pre>
 </div>
-<div list="$:/ControlPanel [[Draft of 'Responding to Messages Table Example']] Contents" title="$:/StoryList">
+<div list="[[Responding to Messages Table Example]] Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -6792,34 +6790,6 @@ The next step is to [[enter a name|Direct Message Photo 10]].</pre>
 &lt;li&gt;&lt;&lt;tag Video&gt;&gt;
 &lt;li&gt;&lt;&lt;tag Text&gt;&gt;
 &lt;li&gt;&lt;&lt;tag Infographics&gt;&gt;</pre>
-</div>
-<div created="20160819022607820" draft.of="Responding to Messages Table Example" draft.title="Responding to Messages Table Example" modified="20160819025034725" tags="ExamplesByCode" title="Draft of 'Responding to Messages Table Example'">
-<pre>^^This example shows a table of all steps tagged with DirectMessageTxt. Need to fix order, and to associate through fields the photos and video. I did the first few steps^^
-&lt;table border=&quot;2&quot;&gt;
-&lt;tr&gt;
-&lt;tr&gt;
-&lt;th&gt;Tiddler Name&lt;/th&gt;
-&lt;th&gt;Tiddler Text&lt;/th&gt;
-&lt;th&gt;Video Link&lt;/th&gt;
-&lt;th&gt;Photo Link&lt;/th&gt;
-&lt;/tr&gt;
-&lt;$list filter=&quot;[tag[DirectMessageTxt]]&quot;&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;$link&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/td&gt;
-&lt;td&gt;{{!!text}}&lt;/td&gt;
-&lt;td&gt;
-&lt;$set name=&quot;myVideo&quot; value={{!!video}}&gt;
-&lt;$link to=&lt;&lt;myVideo&gt;&gt; &gt;Video&lt;/$link&gt;
-&lt;/$set&gt;
-&lt;/td&gt;
-&lt;td&gt;
-&lt;$set name=&quot;myPhoto&quot; value={{!!photo}}&gt;
-&lt;$link to=&lt;&lt;myPhoto&gt;&gt; &gt;Photo&lt;/$link&gt;
-&lt;/$set&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/$list&gt;
-&lt;/table&gt;</pre>
 </div>
 <div created="20160621001529182" modified="20160627191809436" tags="Text" title="How to Tweet">
 <pre>&lt;li&gt;[[Retweet]]
@@ -7168,8 +7138,10 @@ Go to [[next step|Respond Text 3]].</pre>
 |{{Respond Text 7}}|[[Photo|Direct Message Photo 7]]|[[Video|Respond DM Video 7]]|
 </pre>
 </div>
-<div created="20160819022607820" modified="20160819024803564" tags="ExamplesByCode" title="Responding to Messages Table Example">
+<div created="20160819022607820" modified="20160819030346365" tags="ExamplesByCode" title="Responding to Messages Table Example">
 <pre>^^This example shows a table of all steps tagged with DirectMessageTxt. Need to fix order, and to associate through fields the photos and video. I did the first few steps^^
+
+&lt;!--first we begin a table and put headers in the first row --&gt;
 &lt;table border=&quot;2&quot;&gt;
 &lt;tr&gt;
 &lt;tr&gt;
@@ -7178,16 +7150,22 @@ Go to [[next step|Respond Text 3]].</pre>
 &lt;th&gt;Video Link&lt;/th&gt;
 &lt;th&gt;Photo Link&lt;/th&gt;
 &lt;/tr&gt;
+&lt;!-- here we run a filter seeking all tiddlers with the named tag. Note they sort by title, which is problematic in this case, but we could easily fix--&gt;
 &lt;$list filter=&quot;[tag[DirectMessageTxt]]&quot;&gt;
+&lt;!--now we open a row for each tiddler that matches the filter--&gt;
 &lt;tr&gt;
+&lt;!--in the first cell we put a link to the currentTiddler--&gt;
 &lt;td&gt;&lt;$link&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/td&gt;
+&lt;!--in the second cell we put the contents of the text field of the currentTiddler--&gt;
 &lt;td&gt;{{!!text}}&lt;/td&gt;
 &lt;td&gt;
+&lt;!--in the third cell we put the name of the video field of the currentTiddler in a value, and then put that value in a cell--&gt;
 &lt;$set name=&quot;myVideo&quot; value={{!!video}}&gt;
 &lt;$link to=&lt;&lt;myVideo&gt;&gt; &gt;Video&lt;/$link&gt;
 &lt;/$set&gt;
 &lt;/td&gt;
 &lt;td&gt;
+&lt;!--in the fourth cell we put the name of the phot field of the currentTiddler in a value, and then put that value in a cell--&gt;
 &lt;$set name=&quot;myPhoto&quot; value={{!!photo}}&gt;
 &lt;$link to=&lt;&lt;myPhoto&gt;&gt; &gt;Photo&lt;/$link&gt;
 &lt;/$set&gt;

@@ -129,6 +129,8 @@ Error message and password prompt
 
 <li>$:/plugins/tiddlywiki/help</li>
 
+<li>$:/plugins/tiddlywiki/help/HelpPanel</li>
+
 <li>$:/plugins/tiddlywiki/help/HelpPanel/DesignWriteVideos</li>
 
 <li>$:/plugins/tiddlywiki/help/HelpPanel/Videos</li>
@@ -277,8 +279,6 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>Draft of '$:/plugins/tiddlywiki/help/HelpPanel'</li>
-
 </ul>
 </p>
 
@@ -292,8 +292,8 @@ Error message and password prompt
 <div created="20160819003649931" modified="20160819005040899" title="$:/config/Help/CurrentVideo">
 <pre>$:/plugins/tiddlywiki/help/Videos/TiddlyDesktop</pre>
 </div>
-<div created="20160819003633146" modified="20160819003933741" title="$:/config/ShowHelp">
-<pre>yes</pre>
+<div created="20160819003633146" modified="20160819005652496" title="$:/config/ShowHelp">
+<pre>no</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
 <pre>{
@@ -8021,6 +8021,18 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20160819005632981" modified="20160819005632981" tags="$:/tags/PageTemplate" title="$:/plugins/tiddlywiki/help/HelpPanel">
+<pre>&lt;$reveal type=&quot;match&quot; state=&quot;$:/config/ShowHelp&quot; text=&quot;yes&quot;&gt;
+&lt;div class=&quot;tc-help-panel&quot;&gt;
+&lt;div class=&quot;tc-tiddler-controls&quot;&gt;
+&lt;$button set=&quot;$:/config/ShowHelp&quot; setTo=&quot;no&quot; class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt; ''Help Panel''
+&lt;/div&gt;
+&lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/HelpPanel]!has[draft.of]]&quot; &quot;$:/plugins/tiddlywiki/help/HelpPanel/Support&quot; &quot;$:/state/tab/help&quot;&gt;&gt;
+&lt;/div&gt;
+&lt;/$reveal&gt;
+
+</pre>
+</div>
 <div caption="DesignWrite Videos Caption" created="20160819004444511" modified="20160819005031863" tags="$:/tags/HelpPanel" title="$:/plugins/tiddlywiki/help/HelpPanel/DesignWriteVideos">
 <pre>\define show-video-inner(embed)
 &lt;iframe width=&quot;280&quot; height=&quot;157&quot; src=&quot;&quot;&quot;http://www.youtube.com/embed/$embed$?autoplay=0&amp;showinfo=0&amp;theme=light&amp;rel=0&amp;modestbranding=1&amp;autohide=1&quot;&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -8096,7 +8108,7 @@ Choose video: &lt;$select tiddler=&quot;$:/config/Help/CurrentVideo&quot;&gt;
 <div created="20160819003926079" modified="20160819004818057" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="$:/ControlPanel $:/plugins/tiddlywiki/help/Videos/DWVideo $:/plugins/tiddlywiki/help/HelpPanel/DesignWriteVideos $:/plugins/tiddlywiki/help/HelpPanel/Videos [[Draft of '$:/plugins/tiddlywiki/help/HelpPanel']] $:/plugins/tiddlywiki/help $:/plugins/tiddlywiki/help/Videos/TiddlyDesktop" title="$:/StoryList">
+<div list="" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160819003704855" modified="20160819004634077" title="$:/temp/advancedsearch">
@@ -8563,18 +8575,6 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
         }
     }
 }</pre>
-</div>
-<div draft.of="$:/plugins/tiddlywiki/help/HelpPanel" draft.title="$:/plugins/tiddlywiki/help/HelpPanel" modified="20160819004020017" tags="$:/tags/PageTemplate" title="Draft of '$:/plugins/tiddlywiki/help/HelpPanel'">
-<pre>&lt;$reveal type=&quot;match&quot; state=&quot;$:/config/ShowHelp&quot; text=&quot;yes&quot;&gt;
-&lt;div class=&quot;tc-help-panel&quot;&gt;
-&lt;div class=&quot;tc-tiddler-controls&quot;&gt;
-&lt;$button set=&quot;$:/config/ShowHelp&quot; setTo=&quot;no&quot; class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt; ''Help Panel''
-&lt;/div&gt;
-&lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/HelpPanel]!has[draft.of]]&quot; &quot;$:/plugins/tiddlywiki/help/HelpPanel/Support&quot; &quot;$:/state/tab/help&quot;&gt;&gt;
-&lt;/div&gt;
-&lt;/$reveal&gt;
-
-</pre>
 </div>
 
 </div>

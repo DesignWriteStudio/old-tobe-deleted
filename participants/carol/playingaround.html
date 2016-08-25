@@ -121,6 +121,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/SiteSubtitle</li>
@@ -149,7 +151,15 @@ Error message and password prompt
 
 <li>Learning</li>
 
+<li>Persian Village</li>
+
 <li>tag pills</li>
+
+<li>The Paul Bley Quartet - Solemn Meditation  (Gene Norman Presents GNP 31)</li>
+
+<li>track template</li>
+
+<li>YouTubeMacros</li>
 
 </ul>
 </p>
@@ -7809,6 +7819,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[YouTubeMacros]]</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -7827,7 +7842,7 @@ Error message and password prompt
 <div created="20160825154543708" modified="20160825154543708" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="[[tag pills]] [[Hello, Carol]] Learning FutureIdeasToDwellOn CamelCaseWords" title="$:/StoryList">
+<div list="YouTubeMacros [[Persian Village]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -7967,8 +7982,66 @@ Error message and password prompt
 <div created="20160825155353041" modified="20160825155402234" tags="" title="Learning">
 <pre></pre>
 </div>
+<div album="The Paul Bley Quartet - Solemn Meditation (Gene Norman Presents GNP 31)" created="20160825160948591" modified="20160825162435743" tags="Track" title="Persian Village" video="OGCyek9Q3O8" youtubekey="OGCyek9Q3O8">
+<pre>&lt;&lt;youtube-embed OGCyek9Q3O8&gt;&gt;</pre>
+</div>
 <div created="20160825155421351" modified="20160825155532203" tags="" title="tag pills">
 <pre>&lt;&lt;tag Learning&gt;&gt;</pre>
+</div>
+<div created="20160825160809272" modified="20160825160919042" tags="Album" title="The Paul Bley Quartet - Solemn Meditation  (Gene Norman Presents GNP 31)">
+<pre>&lt;h3&gt;&lt;a name=&quot;gene-norman-presents-gnp-31&quot;&gt;The Paul Bley Quartet - Solemn Meditation &amp;nbsp;(Gene Norman Presents GNP 31)&lt;/a&gt;&lt;/h3&gt;
+Dave Pike (vibes) Paul Bley (piano) Charlie Haden (bass) Lennie McBrowne (drums)
+&lt;div class=&quot;date&quot;&gt;Los Angeles, CA, spring 1958&lt;/div&gt;
+&lt;table width=&quot;100%&quot;&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;td width=&quot;15%&quot;&gt;&lt;/td&gt;&lt;td&gt;Birk's Works
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;O Plus One
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Porgy
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Solemn Meditation
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;I Remember Harlem
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Drum Two
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Everywhere
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Beau Diddley
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[Persian Village]]
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</pre>
+</div>
+<div created="20160825160954116" modified="20160825161530082" tags="$:/tags/ViewTemplate" title="track template">
+<pre>&lt;$list filter=&quot;[is[current]tag[Track]]&quot;&gt;
+&lt;&lt;currentTiddler&gt;&gt;
+Album: {{!!album}}
+^^[[track template]]^^</pre>
+</div>
+<div created="20160118151740003" creator="stevesunypoly" modified="20160224194247217" modifier="stevesunypoly" tags="$:/tags/Macro DesignWriteMacros" title="YouTubeMacros" type="application/x-tiddler">
+<pre>\define youtube-link(video)
+[[YouTube|https://www.youtube.com/watch?v=$video$]]
+\end
+
+\define youtube-embed(video)
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/$video$&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+https://www.youtube.com/watch?v=$video$
+\end
+
+\define youtube-transclude(video)
+{{$video}}
+\end
+
+\define youtube-display(video)
+
+!! {{!!description}}
+[[YouTube|https://www.youtube.com/watch?v=$video$]]&lt;br&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/$video$&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+
+\end
+
+\define youtube-x(video,start,end)
+
+!! {{!!description}}
+[[YouTube|https://www.youtube.com/embed/$video$?start=$start$&amp;end=$end$]]&lt;br&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/$video$?start=$start$&amp;end=$end$&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+\end
+
+
+
+</pre>
 </div>
 
 </div>

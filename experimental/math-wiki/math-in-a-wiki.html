@@ -119,15 +119,43 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="http://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/DefaultSidebarTab</li>
+
+<li>$:/config/NewJournal/Tags</li>
+
+<li>$:/config/NewJournal/Title</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki</li>
+
 <li>$:/core</li>
+
+<li>$:/core/templates/static.template.html</li>
+
+<li>$:/core/templates/static.tiddler.html</li>
+
+<li>$:/core/ui/SideBar/More</li>
+
+<li>$:/core/ui/SideBar/Open</li>
+
+<li>$:/core/ui/SideBar/Recent</li>
+
+<li>$:/core/ui/SideBar/Tools</li>
 
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
+
+<li>$:/math/new-equation-tiddler-button</li>
 
 <li>$:/plugins/tiddlywiki/katex</li>
 
@@ -137,23 +165,51 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/tab--1498284803</li>
+
+<li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab/moresidebar-1645249547</li>
+
+<li>$:/state/tab/moresidebar-401116514</li>
+
 <li>$:/state/tab/sidebar--1835078512</li>
 
 <li>$:/StoryList</li>
 
+<li>$:/temp/advancedsearch</li>
+
+<li>$:/temp/equation</li>
+
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/search</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>demo 1</li>
+<li>A Text Area to write equations</li>
 
-<li>katex</li>
+<li>equation</li>
+
+<li>Equation</li>
+
+<li>Equation 1</li>
+
+<li>Equation 2</li>
+
+<li>Equation Example</li>
+
+<li>Equation Example 1</li>
+
+<li>KaTex</li>
 
 <li>KaTex Examples</li>
 
 <li>katex plugin</li>
+
+<li>NewEquation</li>
 
 </ul>
 </p>
@@ -165,8 +221,29 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20160901135838063" modified="20160901135838063" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
-<pre>show</pre>
+<div created="20160901165039180" modified="20160901165039180" title="$:/config/DefaultSidebarTab">
+<pre>NewEquation</pre>
+</div>
+<div created="20160901160420257" modified="20160901160421508" title="$:/config/NewJournal/Tags">
+<pre>Equations</pre>
+</div>
+<div created="20160901160432144" modified="20160901160602314" title="$:/config/NewJournal/Title">
+<pre>Equation  YYYY0MM0DD0hh0mm</pre>
+</div>
+<div created="20160901170017695" modified="20160901170017695" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<pre>hide</pre>
+</div>
+<div created="20160901135838063" modified="20160901170013186" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>hide</pre>
+</div>
+<div created="20160901160511623" modified="20160901170015922" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal">
+<pre>hide</pre>
+</div>
+<div created="20160901160512641" modified="20160901170014749" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<pre>hide</pre>
+</div>
+<div created="20160901170022204" modified="20160901170022204" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
+<pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
 <pre>{
@@ -7816,6 +7893,122 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20160901170038871" modified="20160901170038871" title="$:/core/templates/static.template.html" type="text/vnd.tiddlywiki-html">
+<pre>\define tv-wikilink-template() static/$uri_doubleencoded$.html
+\define tv-config-toolbar-icons() no
+\define tv-config-toolbar-text() no
+\define tv-config-toolbar-class() tc-btn-invisible
+\rules only filteredtranscludeinline transcludeinline
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;TiddlyWiki&quot; /&gt;
+&lt;meta name=&quot;tiddlywiki-version&quot; content=&quot;{{$:/core/templates/version}}&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt;
+&lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;
+&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+&lt;title&gt;{{$:/core/wiki/title}}&lt;/title&gt;
+&lt;div id=&quot;styleArea&quot;&gt;
+{{$:/boot/boot.css||$:/core/templates/css-tiddler}}
+&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+{{$:/core/ui/PageStylesheet||$:/core/templates/wikified-tiddler}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;tc-body&quot;&gt;
+{{$:/StaticBanner||$:/core/templates/html-tiddler}}
+{{$:/core/ui/PageTemplate||$:/core/templates/html-tiddler}}
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<div created="20160901165606895" modified="20160901165925662" tags="DesignWrite" title="$:/core/templates/static.tiddler.html">
+<pre>\define tv-wikilink-template() $uri_doubleencoded$.html
+\define tv-config-toolbar-icons() no
+\define tv-config-toolbar-text() no
+\define tv-config-toolbar-class() tc-btn-invisible
+`&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;TiddlyWiki&quot; /&gt;
+&lt;meta name=&quot;tiddlywiki-version&quot; content=&quot;`{{$:/core/templates/version}}`&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt;
+&lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;
+&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;static.css&quot;&gt;
+&lt;title&gt;`howdy - &lt;$view field=&quot;title&quot;/&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class=&quot;tc-body&quot;&gt;
+`{{$:/StaticBanner||$:/core/templates/html-tiddler}}`
+&lt;section class=&quot;tc-story-river&quot;&gt;
+`&lt;$importvariables filter=&quot;[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]&quot;&gt;
+&lt;$view tiddler=&quot;$:/core/ui/ViewTemplate&quot; format=&quot;htmlwikified&quot;/&gt;
+&lt;/$importvariables&gt;`
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+`</pre>
+</div>
+<div caption="{{$:/language/SideBar/More/Caption}}" created="20160901170349146" modified="20160901170349146" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/More">
+<pre>&lt;div class=&quot;tc-more-sidebar&quot;&gt;
+&lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; &quot;$:/core/ui/MoreSideBar/Tags&quot; &quot;$:/state/tab/moresidebar&quot; &quot;tc-vertical&quot;&gt;&gt;
+&lt;/div&gt;
+</pre>
+</div>
+<div caption="{{$:/language/SideBar/Open/Caption}}" created="20160901170543439" modified="20160901170553792" tags="$:/tags/MoreSideBar" title="$:/core/ui/SideBar/Open">
+<pre>\define lingo-base() $:/language/CloseAll/
+&lt;$list filter=&quot;[list[$:/StoryList]]&quot; history=&quot;$:/HistoryList&quot; storyview=&quot;pop&quot;&gt;
+
+&lt;$button message=&quot;tm-close-tiddler&quot; tooltip={{$:/language/Buttons/Close/Hint}} aria-label={{$:/language/Buttons/Close/Caption}} class=&quot;tc-btn-invisible tc-btn-mini&quot;&gt;&amp;times;&lt;/$button&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;
+
+&lt;/$list&gt;
+
+&lt;$button message=&quot;tm-close-all-tiddlers&quot; class=&quot;tc-btn-invisible tc-btn-mini&quot;&gt;&lt;&lt;lingo Button&gt;&gt;&lt;/$button&gt;
+</pre>
+</div>
+<div caption="{{$:/language/SideBar/Recent/Caption}}" created="20160901170621838" modified="20160901170634486" tags="$:/tags/MoreSideBar" title="$:/core/ui/SideBar/Recent">
+<pre>&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}}/&gt;
+</pre>
+</div>
+<div caption="{{$:/language/SideBar/Tools/Caption}}" created="20160901170133794" modified="20160901170409141" tags="$:/tags/MoreSideBar" title="$:/core/ui/SideBar/Tools">
+<pre>\define lingo-base() $:/language/ControlPanel/
+\define config-title()
+$:/config/PageControlButtons/Visibility/$(listItem)$
+\end
+
+&lt;&lt;lingo Basics/Version/Prompt&gt;&gt; &lt;&lt;version&gt;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value=&quot;&quot;&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;div style=&quot;position:relative;&quot;&gt;
+
+&lt;$checkbox tiddler=&lt;&lt;config-title&gt;&gt; field=&quot;text&quot; checked=&quot;show&quot; unchecked=&quot;hide&quot; default=&quot;show&quot;/&gt; &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt; &lt;i class=&quot;tc-muted&quot;&gt;&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; field=&quot;description&quot;/&gt;&lt;/i&gt;
+
+&lt;/div&gt;
+
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div created="20160901135830190" modified="20160901135832414" title="$:/DefaultTiddlers">
 <pre>[[KaTex Examples]]
 </pre>
@@ -7823,10 +8016,13 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/tiddlywiki/katex]]</pre>
+# [[dyanmic captioning with inheritance]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div created="20160901161414442" modified="20160901164937165" title="$:/math/new-equation-tiddler-button">
+<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;Equation&quot; text={{Equation}}&gt;New Equation&lt;/$button&gt;</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="KaTeX: mathematical typography" list="readme usage" plugin-type="plugin" title="$:/plugins/tiddlywiki/katex" type="application/json" version="5.1.13">
 <pre>{
@@ -7976,14 +8172,32 @@ Error message and password prompt
 <div created="20160901133709042" modified="20160901133713074" title="$:/SiteTitle">
 <pre>using tiddlywiki for math</pre>
 </div>
-<div created="20160901133830799" modified="20160901133830799" title="$:/state/showeditpreview">
+<div created="20160901133830799" modified="20160901151027892" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20160901135816497" modified="20160901135836174" title="$:/state/tab/sidebar--1835078512">
+<div created="20160901164840971" modified="20160901165853185" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+</div>
+<div created="20160901165032395" modified="20160901165033852" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
+</div>
+<div created="20160901170159225" modified="20160901170312521" title="$:/state/tab/moresidebar-1645249547">
+<pre>$:/core/ui/MoreSideBar/All</pre>
+</div>
+<div created="20160901170446494" modified="20160901170712009" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
-<div list="$:/ControlPanel [[KaTex Examples]]" title="$:/StoryList">
+<div created="20160901135816497" modified="20160901170717650" title="$:/state/tab/sidebar--1835078512">
+<pre>NewEquation</pre>
+</div>
+<div list="[[Equation 2]] [[Equation Example]] [[KaTex Examples]]" title="$:/StoryList">
 <pre></pre>
+</div>
+<div created="20160901160640889" modified="20160901170524206" title="$:/temp/advancedsearch">
+<pre>sidebar</pre>
+</div>
+<div created="20160901152950272" equation="f(x) = \int_{-\infty}^\infty     \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi" modified="20160901160145149" title="$:/temp/equation">
+<pre>$$ f(y) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi $$</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -7998,6 +8212,9 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20160901160636106" modified="20160901170205915" title="$:/temp/search">
+<pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.13">
 <pre>{
@@ -8108,18 +8325,51 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20160901133827952" modified="20160901133917121" tags="" title="demo 1">
-<pre>```
-$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-$$
-```
+<div created="20160901155424208" equation="$ f(y) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi $" modified="20160901160351002" tags="" title="A Text Area to write equations" }="true">
+<pre>``write equation in box below. begin and end equation with $$ for now``
+&lt;br&gt;
 
-$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+&lt;$edit-text tiddler=&quot;$:/temp/equation&quot; tag=&quot;textarea&quot;/&gt;
+&lt;br&gt;
+&lt;$button&gt;
+Write this equation to this tiddler
+&lt;$action-setfield $tiddler=&lt;&lt;currentTiddler&gt;&gt; equation={{$:/temp/equation}}/&gt;
+&lt;/$button&gt;&lt;br&gt;
+&lt;hr&gt;
+{{!!equation}}</pre>
+</div>
+<div created="20160901153901164" equation="$f(x) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi$" modified="20160901154054439" title="equation">
+<pre>{{!!equation}}</pre>
+</div>
+<div created="20160901163242656" modified="20160901164151246" tags="equation" title="Equation">
+<pre>Enclose KaTex with ``$$`` above and ``$$`` below formula (see [[example|Equation Example]]). Erase this text.</pre>
+</div>
+<div created="20160901165107298" modified="20160901165123178" tags="equation" title="Equation 1">
+<pre>$$
+f(x) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 $$</pre>
 </div>
-<div created="20160901133925115" modified="20160901133935385" tags="" title="katex">
+<div created="20160901170731188" modified="20160901170745111" tags="equation" title="Equation 2">
+<pre>$$
+f(x) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+$$</pre>
+</div>
+<div created="20160901164004354" modified="20160901164734959" title="Equation Example">
+<pre>See [[KaTex Examples]]
+
+```
+$$
+f(x) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+$$
+```
+$$
+f(x) = \int_{-\infty}^\infty    \hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+$$</pre>
+</div>
+<div created="20160901152932632" equation="" modified="20160901153249913" tags="equation" title="Equation Example 1">
+<pre></pre>
+</div>
+<div created="20160901133925115" modified="20160901162105911" tags="" title="KaTex">
 <pre>https://khan.github.io/KaTeX/</pre>
 </div>
 <div created="20160901135700124" modified="20160901135809383" tags="" title="KaTex Examples">
@@ -8198,6 +8448,10 @@ $$ f(x) = \int_{-\infty}^\infinity\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi $$
 </div>
 <div created="20160901133751287" modified="20160901133800701" tags="" title="katex plugin">
 <pre>http://tiddlywiki.com/plugins/tiddlywiki/katex/</pre>
+</div>
+<div created="20160901162538563" list-before="More" modified="20160901170659940" tags="$:/tags/SideBar" title="NewEquation">
+<pre>{{$:/math/new-equation-tiddler-button}}
+^^$:/math/new-equation-tiddler-button^^</pre>
 </div>
 
 </div>

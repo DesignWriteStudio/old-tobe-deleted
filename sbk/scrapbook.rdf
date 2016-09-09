@@ -79,6 +79,7 @@
     <RDF:li RDF:resource="urn:scrapbook:item20160906125308"/>
     <RDF:li RDF:resource="urn:scrapbook:item20160907144104"/>
     <RDF:li RDF:resource="urn:scrapbook:item20160909134725"/>
+    <RDF:li RDF:resource="urn:scrapbook:item20160909135339"/>
   </RDF:Seq>
   <RDF:Description RDF:about="urn:scrapbook:item20160822093707"
                    NS1:id="20160822093707"
@@ -283,6 +284,14 @@
                    NS1:comment=""
                    NS1:source="http://bostinno.streetwise.co/2014/09/26/superpedestrian-raises-4-million-to-fuel-production-of-its-copenhagen-wheel/"
                    NS1:icon="resource://scrapbook/data/20160822093716/favicon.ico" />
+  <RDF:Description RDF:about="urn:scrapbook:item20160909135339"
+                   NS1:id="20160909135339"
+                   NS1:type=""
+                   NS1:title="Original-reply to discussion posts"
+                   NS1:chars="UTF-8"
+                   NS1:icon="resource://scrapbook/data/20160909135339/1436297735-favicon.ico"
+                   NS1:source="https://en-us.help.blackboard.com/Learn/Student/Interact/Discussions/Reply_to_Discussion_Posts"
+                   NS1:comment="" />
   <RDF:Description RDF:about="urn:scrapbook:item20160829201318"
                    NS1:id="20160829201318"
                    NS1:type=""

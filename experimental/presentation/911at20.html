@@ -147,6 +147,10 @@ Error message and password prompt
 
 <li>$:/_talkytalky-styles</li>
 
+<li>$:/.tb/modules/startup/hide-sidebar.js</li>
+
+<li>$:/config/HideSidebarOnStartup</li>
+
 <li>$:/config/Navigation/UpdateAddressBar</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -164,6 +168,8 @@ Error message and password prompt
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/favicon.ico</li>
+
+<li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
@@ -279,7 +285,7 @@ Error message and password prompt
 
 <li>page1</li>
 
-<li>Participants</li>
+<li>Project Leadership</li>
 
 <li>Project Overview</li>
 
@@ -555,6 +561,42 @@ html body.tc-body {
 }
 
 </pre>
+</div>
+<div bag="default" created="20151010151732122" creator="Tobias Beer" modified="20151010151750739" module-type="startup" revision="0" title="$:/.tb/modules/startup/hide-sidebar.js" type="application/javascript">
+<pre>/*\
+title: $:/.tb/modules/startup/hide-sidebar.js
+type: application/javascript
+module-type: startup
+created: 20151010151732122
+creator: Tobias Beer
+modified: 20151010151750739
+
+Hides the sidebar on startup when the config tiddler [[$:/config/hide-sidebar-on-startup]] contains &quot;yes&quot;
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+&quot;use strict&quot;;
+
+// Export name and synchronous status
+exports.name = &quot;hide-sidebar-on-startup&quot;;
+exports.platforms = [&quot;browser&quot;];
+exports.after = [&quot;startup&quot;];
+exports.synchronous = true;
+
+exports.startup = function() {
+	var conf = $tw.wiki.getTiddler(&quot;$:/config/HideSidebarOnStartup&quot;),
+		value = (conf ? conf.getFieldString(&quot;text&quot;) : &quot;&quot;).toLowerCase(),
+		state = value == &quot;yes&quot; ? &quot;no&quot; : &quot;yes&quot;;
+	$tw.wiki.setText(&quot;$:/state/sidebar&quot;, &quot;text&quot;, undefined, state);
+};
+
+})();</pre>
+</div>
+<div bag="default" created="20151007165524815" creator="Tobias Beer" modified="20160914202149827" revision="0" tags="" title="$:/config/HideSidebarOnStartup" type="text/vnd.tiddlywiki">
+<pre>yes</pre>
 </div>
 <div created="20140910212049455" title="$:/config/Navigation/UpdateAddressBar" type="text/vnd.tiddlywiki">
 <pre>no</pre>
@@ -6245,18 +6287,24 @@ border-color: $(backgroundColour)$;
 &lt;/div&gt;
 </pre>
 </div>
-<div created="20131127215321439" modified="20160914170444924" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
+<div created="20131127215321439" modified="20160914202243904" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
 <pre>[[911@20]]
 [[September 11, 2021: A Vision]]
 [[The September 11 Web Archive: Brief History]]
 [[NEH Digital Humanities Advancement Grants]]
 [[911@20: Project Overview]]
 [[Big Goals]]
-[[Participants]]
+[[Project Leadership]]
 </pre>
 </div>
 <div _canonical_uri="./images/%2524%253A%252Ffavicon.ico" title="$:/favicon.ico" type="image/x-icon">
 <pre></pre>
+</div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[$:/.tb/modules/startup/hide-sidebar.js]]
+# [[$:/config/HideSidebarOnStartup]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -19278,7 +19326,7 @@ very-muted-foreground: #888888
 <div modified="20160914163218219" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20160914193419088" title="$:/state/sidebar">
+<div modified="20160914202225749" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20160914174014293" title="$:/state/tab--1498284803">
@@ -19287,13 +19335,13 @@ very-muted-foreground: #888888
 <div modified="20160914163252118" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Theme</pre>
 </div>
-<div modified="20160914170504727" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div modified="20160914202238191" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div modified="20160914154710229" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div modified="20160914173005007" title="$:/state/tab/sidebar--1835078512">
+<div modified="20160914202232403" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div list="911@20 [[September 11, 2021: A Vision]] [[The September 11 Web Archive: Brief History]] [[NEH Digital Humanities Advancement Grants]] [[911@20: Project Overview]] [[Big Goals]] Participants" title="$:/StoryList">
@@ -19325,8 +19373,8 @@ very-muted-foreground: #888888
 <div created="20160914154814120" modified="20160914174009027" title="$:/temp/search">
 <pre></pre>
 </div>
-<div modified="20160914193422489" title="$:/theme">
-<pre>$:/themes/tiddlywiki/starlight</pre>
+<div modified="20160914202252368" title="$:/theme">
+<pre>$:/themes/tiddlywiki/punch</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/snowwhite" description="Centralises the story river, experimental" name="Centralised" plugin-type="theme" title="$:/themes/tiddlywiki/centralised" type="application/json" version="5.1.9-prerelease">
 <pre>{
@@ -19804,17 +19852,19 @@ tiddlywiki MyWiki --rendertiddlers [!is[system]] $:/core/templates/static.tiddle
 <div _canonical_uri="http://webarchive.loc.gov/legacy/20020913002337/http://www.youwillneverbeforgotten.com/ywnbf/" created="20160914162059916" modified="20160914163205377" tags="" title="page1" type="text/html">
 <pre></pre>
 </div>
-<div background-color="#A7FF7B" created="20160914170550474" modified="20160914173831013" title="Participants">
+<div background-color="#A7FF7B" created="20160914170550474" modified="20160914201948547" title="Project Leadership">
 <pre>! Participants
 
 * Humanities / Social Sciences
 ** Steve Schneider, SUNY Poly
-** Meghan Dougherty, Loyola University Chicago
+** //Meghan Dougherty, LoyolaUniversity Chicago//
 * ~TiddlyWiki
 ** Jeremy Ruston, Federatial
 * Internet Archive, Wayback Machine, etc.
-** Mark Graham, Internet Archive
-** Michele Weigel, Old Dominion University</pre>
+** //Mark Graham, Internet Archive//
+** //Michele Weigel, Old Dominion University//
+* Project Management, Administration and Public Relations
+** Gretchen Kriesen, SUNY Poly</pre>
 </div>
 <div background-color="#FF7575" created="20160914171506331" modified="20160914171513394" tags="overview" title="Project Overview">
 <pre>!911@20
@@ -19875,12 +19925,15 @@ document.body.removeChild(link);
 [[Full code on GitHub|https://github.com/Jermolene/TiddlyWiki5/blob/master/core%2Fmodules%2Fsavers%2Fdownload.js]]
 </pre>
 </div>
-<div background-color="#FF9563" created="20160914170000570" modified="20160914173338225" title="September 11, 2021: A Vision">
+<div background-color="#FF9563" created="20160914170000570" modified="20160914201426169" title="September 11, 2021: A Vision">
 <pre>&lt;!-- FF7575, FF9563, DEFF65, A7FF7B, 5AD3FF --&gt;
 
 ! September 11, 2021: A Vision
 
-* Those interested in understanding the September 11 Terrorist attacks would visit http://911@20.com and have the opportunity to select among dozens of stories that use archival resources to describe the days and weeks following the attacks.
+* In the Fall of 2021, there will likely be saturation coverage of the 20th anniversary of the 2001 terrorist attacks. 
+* Thousands of individuals around the world will seek perspective and understanding about these events. 
+* Some of this underRigorous scholarship, semi-formal investigations and casual observation in the [[September 11 Web Archive]] -- which houses tens of thousands of Web sites archived during the days and weeks following the attacks -- will  help provide this perspective and understanding by providing access to stories and explorations about what people did on the Web during this time.
+* We will explore and mine Many of them will have been either unborn, or young children, at the time of the initial attacks. seeking to understand the events of Those interested in understanding the September 11 Terrorist attacks would visit http://911@20.com and have the opportunity to select among dozens of stories that use archival resources to describe the days and weeks following the attacks.
 
 &lt;!-- FF7575, FF9563, DEFF65, A7FF7B, 5AD3FF --&gt;</pre>
 </div>
@@ -20021,9 +20074,13 @@ tiddlywiki ./myWiki \
 See http://tiddlywiki.com/#TaskManagementExample
 </pre>
 </div>
-<div background-color="#A7FF7B" created="20160914173350501" modified="20160914173636642" title="The September 11 Web Archive: Brief History">
+<div background-color="#A7FF7B" created="20160914173350501" modified="20160914201816506" title="The September 11 Web Archive: Brief History">
 <pre>&lt;!-- FF7575, FF9563, DEFF65, A7FF7B, 5AD3FF --&gt;
-! The September 11 Web Archive: Brief History</pre>
+! The September 11 Web Archive: Brief History
+* On September 12, 2001 - a small group of folks from the Library of Congress, the Internet Archive and WebArchivist.org (which included scholars from SUNYIT and the University of Washington) decided to start archiving Web sites with content related to the terrorist attacks (in fact, we called it the &quot;Attack Archive&quot; in the initial email)
+* We gathered URLs, and crawled them.
+* The archive was made available to the public on October 11, 2001. Collection ceased on December 1, 2001.
+* There are more than 30,000 URLs in the collection list, and about XX gig of content in the archive.</pre>
 </div>
 <div background-color="#5AD3FF" title="TiddlersWikification">
 <pre>! Duality of ~TiddlyWiki
